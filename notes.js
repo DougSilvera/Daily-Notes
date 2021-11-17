@@ -21,4 +21,14 @@ const notes = [
         timeSpent: 24
     }
 ]
+
+const notesAboutToday = {
+    id: 3,
+    subject: "javascript",
+    date: "11/17/2021",
+    feeling: "fleeting accomplishment followed by fear of unknown",
+    timeSpent: 45
+}
+notes.push(notesAboutToday)
+
 console.log(notes);
