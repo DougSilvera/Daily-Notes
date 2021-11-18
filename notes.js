@@ -23,7 +23,7 @@ const notes = [
 ]
 
 const notesAboutToday = {
-    id: 3,
+    id: 4,
     subject: "javascript",
     date: "11/17/2021",
     feeling: "fleeting accomplishment followed by fear of unknown",
@@ -34,25 +34,52 @@ notes.push(notesAboutToday)
 console.log(notes);
 
 
-for (const note of notes) {
-    console.log(`
-    note ${note.id}
-    subject ${note.subject}
-    date ${note.date}
-    How I felt ${note.feeling}
-    Time spent ${note.timeSpent} minutes`
-    )
-}
-const howIfeltId= "despair"
+// for (const note of notes) {
+//     console.log(`
+//     note ${note.id}
+//     subject ${note.subject}
+//     date ${note.date}
+//     How I felt ${note.feeling}
+//     Time spent ${note.timeSpent} minutes`
+//     )
+// }
+// const howIfeltId= "despair"
 
-for (const note of notes) {
+// for (const note of notes) {
 
-    if (note.feeling === howIfeltId)
-    console.log(`
-    note ${note.id}
-    subject ${note.subject}
-    date ${note.date}
-    How I felt ${note.feeling}
-    Time spent ${note.timeSpent} minutes`
-    )
-}
+//     if (note.feeling === howIfeltId)
+//     console.log(`
+//     note ${note.id}
+//     subject ${note.subject}
+//     date ${note.date}
+//     How I felt ${note.feeling}
+//     Time spent ${note.timeSpent} minutes`
+//     )
+// }
+
+
+const addNoteToBook = (noteObject) => {
+    const lastIndex= notes.length - 1
+    const currentLastNote = notes[lastIndex]
+    const maxId = currentLastNote.id
+    const idForNewNote = maxId + 1
+    noteObject.id = idForNewNote
+    notes.push(noteObject)}
+
+    const newNote = {
+        subject: "javascript functions",
+        date: "11/18/2021",
+        feeling: "mind numbness",
+        timeSpent: 60    
+    }
+
+    addNoteToBook(newNote)
+    
+    for (const note of notes) {
+        console.log(`
+        note ${note.id}
+        subject ${note.subject}
+        date ${note.date}
+        How I felt ${note.feeling}
+        Time spent ${note.timeSpent} minutes`)
+    }
