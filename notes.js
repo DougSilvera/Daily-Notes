@@ -43,3 +43,16 @@ for (const note of notes) {
     Time spent ${note.timeSpent} minutes`
     )
 }
+const howIfeltId= "despair"
+
+for (const note of notes) {
+
+    if (note.feeling === howIfeltId)
+    console.log(`
+    note ${note.id}
+    subject ${note.subject}
+    date ${note.date}
+    How I felt ${note.feeling}
+    Time spent ${note.timeSpent} minutes`
+    )
+}
