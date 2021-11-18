@@ -32,3 +32,14 @@ const notesAboutToday = {
 notes.push(notesAboutToday)
 
 console.log(notes);
+
+
+for (const note of notes) {
+    console.log(`
+    note ${note.id}
+    subject ${note.subject}
+    date ${note.date}
+    How I felt ${note.feeling}
+    Time spent ${note.timeSpent} minutes`
+    )
+}
